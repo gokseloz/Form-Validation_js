@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Order Table</title>
+</head>
+
+<body>
+    <form action="">
+        <div id="fullpage">
+            <h1>Make an Order:</h1>
+            <table>
+                <tr>
+                    <td class="label_col">First Name:</td>
+                    <td class="input_col"><input type="text" name="firstName" id="firstName"
+                            onblur="firstNameValidation()"></td>
+                    <td class="feedback_col"><span id="firstNamePrompt">&nbsp;</span></td>
+                </tr>
+                <tr>
+                    <td class="label_col">Last Name:</td>
+                    <td class="input_col"><input type="text" name="lastName" id="lastName"
+                            onblur="lastNameValidation()"></td>
+                    <td class="feedback_col"><span id="lastNamePrompt">&nbsp;</span></td>
+                </tr>
+                <tr>
+                    <td class="label_col">Phone Number:</td>
+                    <td class="input_col"><input type="text" name="phoneNumber" id="phoneNumber"
+                            placeholder="xxx-xxxx-xxxxx" onblur="phoneNumberValidation()"></td>
+                    <td class="feedback_col"><span id="phonePrompt">xxx-xxx-xxxxx</span></td>
+                </tr>
+                <tr>
+                    <td class="label_col">Order Quantity:</td>
+                    <td class="input_col"><input type="number" name="orderQuantity" id="orderQuantity"
+                            onblur="orderValidation()"></td>
+                    <td class="feedback_col"><span id="orderQuantityPrompt">1-55</span></td>
+                </tr>
+                <tr>
+                    <td class="label_col">Item Price:</td>
+                    <td class="input_col"><input type="text" name="itemPrice" id="itemPrice" value="10.00" readonly>
+                    </td>
+                    <td class="feedback_col"><span id="itemPricePrompt">USD</span></td>
+                </tr>
+
+                <button type="button" class="Button" onclick="callOrder()">Order Now</button>
+
+
+            </table>
+
+            <div class="sumContainer">
+                <h2 id="sumHeader"></h2>
+                <p id="sumUserName"></p>
+                <p id="sumPhone"></p>
+                <p id="sumPrice"></p>
+            </div>
+        </div>
+    </form>
+
+
+
+
+
+    <script src="app.js"></script>
+</body>
+
+</html>
